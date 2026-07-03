@@ -59,6 +59,11 @@ export class ClaudeMemClient {
     return hits.filter((h) => h.created_at_epoch > epochMs);
   }
 
+  async searchAll(limit = 10000): Promise<SearchHit[]> {
+    const hits = await this.search("*", limit);
+    return hits.sort((a, b) => a.created_at_epoch - b.created_at_epoch);
+  }
+
   private async get<T>(path: string): Promise<T> {
     const r = await fetch(`${this.baseUrl}${path}`);
     if (!r.ok) throw new Error(`claude-mem GET ${path} → ${r.status}`);
