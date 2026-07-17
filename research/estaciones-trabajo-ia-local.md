@@ -73,3 +73,27 @@ Anuncios A6000 activos localizados (precio a confirmar en cada anuncio):
 - https://www.thundercompute.com/blog/nvidia-rtx-a6000-pricing
 - https://hardforum.com/threads/sold-todays-sale-nvidia-rtx-a6000-used-pull-48gb-10700-cuda-cores-dual-slot.2046127/
 - https://www.accio.com/plp/rtx-a6000-ebay-used
+
+## Equivalente actual en venta nueva (Lenovo)
+
+La sucesora directa de la P920 en el catálogo vigente de Lenovo es la **ThinkStation PX**: doble Xeon Scalable (4ª/5ª gen), hasta 2 TB DDR5 ECC, hasta 4× RTX 6000 Ada (48 GB c/u), 9 ranuras PCIe (4×5.0 + 5×4.0). Precio de entrada ~5.780–5.970 € (sin monitor); configuraciones tope con 4 GPU y CPUs Platinum superan los 60.000 €. Referencia con precio real: 2× Xeon Silver 4516Y+, 256 GB DDR5, 1 TB NVMe, 1× RTX 6000 Ada 48GB — https://www.monitors.com/products/lenovo-thinkstation-px-2x-xeon-silver-4516y-256gb-rtx-6000-ada
+Fuentes: https://www.lenovo.com/es/es/p/workstations/thinkstationp/thinkstation-px-workstation/len102s0013 · https://thinkstation-specs.com/thinkstation/px/ · https://www.tuexperto.com/2024/10/29/lenovo-thinkstation-px-una-estacion-de-trabajo-para-tareas-muy-exigentes-con-diseno-flexible/
+
+Conclusión: la PX nueva ya cuesta lo que el montaje completo de segunda mano (chasis + varias GPU). Solo compensa si se quiere garantía de fábrica/soporte empresarial o GPUs RTX 6000 Ada. Para entrada económica y ampliable, la vía de segunda mano sigue siendo muy superior en €/GB VRAM.
+
+## Opción de entrada recomendada: segunda mano, en stock, 1 GPU con hueco para ampliar
+
+**JANSit** (reacondicionador con tiendas en España y Portugal, jansit.es / recondicionados.jans.pt) tiene en stock justo el perfil buscado — chasis dual-Xeon con 3 ranuras para GPU, ya con una profesional Ampere instalada, y garantía real:
+
+| Modelo | Config | GPU instalada | Precio | Garantía | Enlace |
+|---|---|---|---|---|---|
+| **HP Z8 G4** (recomendada) | 2× Xeon Gold 6138, 128 GB DDR4, 1 TB SSD | RTX A4000 16GB (Ampere, ECC, ~140W, 1 sola ranura) | **2.749 €** (antes 3.690 €) | 3 años | https://recondicionados.jans.pt/produto/hp-z8-g4/ |
+| HP Z8 G4 (variante 96GB) | 2× Xeon Gold, 96 GB DDR4 | RTX A4000 16GB | ver web | 3 años | https://recondicionados.jans.pt/produto/workstation-recondicionada-hp-z8-g4-rtx-a4000/ |
+| Lenovo P920 (alternativa) | i9-10920X 10c / config base | RTX A4000 16GB | ver web | 2 años | https://recondicionados.jans.pt/produto/lenovo-thinkstation-p920-workstation/ |
+| HP Z4 G4 (opción económica, un solo socket) | i9-10980XE 18c, 32 GB | RTX A4000 16GB | **1.249 €** | ver web | https://jansit.es/workstation-reacondicionada-hp-z4-g4-i9/ |
+
+**Por qué la Z8 G4 a 2.749 €**: chasis con 3 ranuras PCIe libres (hueco para 2 GPU más), fuente de hasta 1700W disponible en HP Z8 G4, doble Xeon Gold ya de serie (no hay que ampliar CPU para escalar cómputo), y ya trae una GPU Ampere (A4000, 16 GB, ECC, muy eficiente ~140W) como punto de partida funcional para inferencia/fine-tuning ligero. Cuando el presupuesto lo permita, se le añade una o dos A5000/A6000/3090 sin cambiar de chasis.
+
+**Nota de la propia Z4 G4** (1.249 €) es la opción más barata si el presupuesto manda, pero es de un solo socket y con muchas menos ranuras PCIe libres — limita cuánto se puede ampliar a futuro. Para "empezar barato pero con margen real de expansión", la Z8 G4 a 2.749 € es la mejor relación.
+
+**Limitación de esta búsqueda**: el proxy de este entorno bloquea el acceso directo (WebFetch/curl) a la mayoría de estas páginas (eBay, Kleinanzeigen, JANSit, Refurbed, Back Market todas devuelven 403), así que los precios y el stock exacto proceden de fragmentos de resultados de búsqueda, no de una visita directa a la ficha de producto. Conviene confirmar stock/precio final entrando manualmente al enlace antes de comprar.
